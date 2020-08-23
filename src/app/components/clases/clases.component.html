@@ -9,4 +9,6 @@
 <button class="btn btn-primary" (click)="propiedades.danger = !propiedades.danger">Cambiar</button>
 <hr>
 <h3>Proceso asíncrono</h3>
-<button class="btn btn-primary" >Guardar cambios</button>
+<button class="btn btn-primary" (click)="ejecturar()" [ngClass]="{'btn-success': loader}" [disabled]="loader">
+  {{ loader ? 'cargando...': 'Guardar cambios' }}
+</button>

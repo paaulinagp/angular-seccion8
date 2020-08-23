@@ -11,7 +11,17 @@ export class ClasesComponent implements OnInit {
   propiedades: any = {
     danger: false,
   };
+
+  loader: boolean = false;
+
   constructor() {}
 
   ngOnInit(): void {}
+
+  ejecturar(): void {
+    console.log('si entro');
+    this.loader = true;
+
+    setTimeout(() => (this.loader = false), 3000);
+  }
 }
